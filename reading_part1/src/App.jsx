@@ -15,6 +15,20 @@ const Nowtime = (time_prop) =>{
   </>
   )
 }
+
+
+const Holler = (propobj) => {
+  console.log(propobj)
+  return(
+    <div>
+      <p>
+        Hello {propobj.name}, you is {propobj.age} years old
+      </p>
+    </div>
+  )
+}
+
+
 const Footer = () =>{
   return(
     <div> <br/>
@@ -37,6 +51,7 @@ const App = () => {
       <Nowtime time = {now.toString()}/>
       <Hello name = {name1} age = {age1} num = {num1} /> 
       <Hello name ='thing22' age = {111}  num = {22}/>  
+      <Holler name = {name1} age = {age1 + 2} />
       <Footer/>
     </div>
   )
