@@ -1,6 +1,7 @@
-//====================================
-/*//Array 
-
+//=============================//
+//          Array              //
+//=============================//
+/*
 const t  = [-1,1,2]
 t.push(5)
 console.log(t)
@@ -32,8 +33,11 @@ const [a , b, ... rest] = tt1
 console.log(a, b) // 1 2
 console.log(rest) // [ 3, 4, 5, 6, 7, 7 ]
 */
-//====================================
-//Objects 
+/*
+
+//=========================//
+//         Objects         // 
+//=========================//
 const object1 = {
     name : 'greatest name',
     age : 34,
@@ -62,7 +66,7 @@ console.log(object3)
   grades: [ 2, 3, 4, 5 ],
   department: 'Biology School and College'
 }*/
-
+/*
 console.log(object1.name) //greatest name
 const fieldname = 'age'
 console.log(object1[fieldname]) // 34
@@ -78,16 +82,77 @@ const calc1 = {
     mulNum : (a, b) => a * b,
 }
 console.log(`${calc1.addNum(4,5)} and multiplying is ${calc1.mulNum(4,5)}`)
+*/
 
 
-//====================================
-//Functions 
+//=================================//
+//          Functions              //
+//=================================//
+    //regular functions 
+const actualSumFunction = function (p1, p2) {
+    console.log(p1)
+    console.log(p2)
+    return p1 + p2
+}
+const result = actualSumFunction(3,4)
+console.log(`sum = ${result}`)
+
+const actualSumFunction2 = (p1, p2) => {
+    console.log(p1)
+    console.log(p2)
+    return p1 + p2
+}
+const result2 = actualSumFunction2(3,4)
+console.log(`sum2 = ${result2}`)
+
+    //no parenthesis for single parameter
+const squareFunc = p => {
+    console.log(p)
+    return p * p 
+}
+    //no brace for single expression  
+const squareFunc2 = p => p * p
+console.log(squareFunc(4))
+console.log(squareFunc2(4))
+
+    //short fucntiuon used for mapping
+const pp = [1,2,4,5,6,3]
+const ppSuared = pp.map( val => val * val) //( (val) => { val * val} )
+console.log(ppSuared)
+
+// used keyword 'fuction'
+function product(a,b){ 
+    return a*b
+}
+const prod_result  = product(2,6)
+console.log(prod_result) // 12
+
+// without the keyword ; fucnntion expression 
+const average = function (a, b) {
+    return(a + b) / 2 
+}
+
+const result_agv = average(2,5)
+console.log(result_agv) // 3.5
 
 
-// Object methods and "this"
+
+//=====================================//
+//          Exercise 1.3 - 1.5         //
+//=====================================//
+
+// ++++  in part1 folder ++++
 
 
-//Classes 
+//==========================================//
+//          Object methods and "this"       //
+//==========================================//
+
+//==========================//
+//          Classes         //
+//==========================//
 
 
-//JavaScript materials 
+//=======================================//
+//          JavaScript materials         //
+//=======================================//
