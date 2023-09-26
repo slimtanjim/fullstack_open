@@ -1,5 +1,6 @@
 //====================================
-//Array 
+/*//Array 
+
 const t  = [-1,1,2]
 t.push(5)
 console.log(t)
@@ -30,9 +31,53 @@ const tt1 = [1,2,3,4,5,6,7,7]
 const [a , b, ... rest] = tt1
 console.log(a, b) // 1 2
 console.log(rest) // [ 3, 4, 5, 6, 7, 7 ]
-
+*/
 //====================================
 //Objects 
+const object1 = {
+    name : 'greatest name',
+    age : 34,
+    education : 'YES'
+}
+
+const object2 = {
+    name : 'really long name',
+    level : 'mid tier hacker',
+    experience : 5,
+}
+
+const object3 = {
+    name:{
+        first :'thing',
+        last : 'one',
+    },
+    grades : [2,3,4,5],
+    department : 'Biology School and College'
+}
+console.log(object1) //{ name: 'greatest name', age: 34, education: 'YES' }
+console.log(object2)
+console.log(object3)
+/*{
+  name: { first: 'thing', last: 'one' },
+  grades: [ 2, 3, 4, 5 ],
+  department: 'Biology School and College'
+}*/
+
+console.log(object1.name) //greatest name
+const fieldname = 'age'
+console.log(object1[fieldname]) // 34
+
+object1.address = "thisdn N 34 Blvd" // adds  property to obj
+object1['secret number'] = 12341 // [] because of the '_' space in 'secret number'
+object1['age'] = 83
+console.log(object1)
+
+    //objects with methods 
+const calc1 = {
+    addNum : (a, b) => `adding ${a} and ${b} is ${a+b}`, // backticks  
+    mulNum : (a, b) => a * b,
+}
+console.log(`${calc1.addNum(4,5)} and multiplying is ${calc1.mulNum(4,5)}`)
 
 
 //====================================
