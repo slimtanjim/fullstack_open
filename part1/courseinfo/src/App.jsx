@@ -1,8 +1,8 @@
-const Header = (props_head) => {
-  console.log(props_head)
+const Header = (props) => {
+  console.log(props)
   return(
     <div>
-      <h1>{props_head.heading}</h1>
+      <h1>{props.course}</h1>
     </div>
   )
 }
@@ -16,22 +16,21 @@ const Parts = (props) => {
   )
 }
 
-const Contents = (props_content) => {
-  ///console.log(props_content)
-  //console.log(props_content.materials[0].part)
+const Contents = (props) => {
   return(
     <div>
-      <Parts cont_parts = {props_content.materials[0].part} cont_exercise = {props_content.materials[0].exercise}/>
-      <Parts cont_parts = {props_content.materials[1].part} cont_exercise = {props_content.materials[1].exercise}/>
-      <Parts cont_parts = {props_content.materials[2].part} cont_exercise = {props_content.materials[2].exercise}/>
+      <Parts cont_parts = {props.parts[0].name} cont_exercise = {props.parts[0].exercises}/>
+      <Parts cont_parts = {props.parts[1].name} cont_exercise = {props.parts[1].exercises}/>
+      <Parts cont_parts = {props.parts[2].name} cont_exercise = {props.parts[2].exercises}/>
     </div>
   )
 }
 
 const Total = (props) =>{
+  console.log(props)
   return(
     <div>
-      <p>Number of exercises {props.nums[0].exercise + props.nums[1].exercise + props.nums[2].exercise}</p>
+      <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
     </div>
   )
 }
@@ -39,15 +38,25 @@ const Total = (props) =>{
 const App = () => {
   const course = 'Half stack application development'
   const parts = [
-    {part : '1) Fundementals of React', exercise : 10},
-    {part : '2) Using props to pass data', exercise : 7},
-    {part : '3) State of a component', exercise : 14}
+    {
+      name : 'Fundamentals of React',
+      exercises : 10
+    },
+    {
+      name : 'Usign props to pass data',
+      exercises : 7
+    },
+    {
+      name : 'State of a component',
+      exercises : 14
+    }
   ]
-  return (
+
+  return(
     <div>
-    <Header heading = {course}/>
-    <Contents materials = {parts} />
-    <Total nums = {parts}/>
+      <Header course = {course}/>
+      <Contents parts ={parts}/>
+      <Total parts={parts}/>
     </div>
   )
 }
